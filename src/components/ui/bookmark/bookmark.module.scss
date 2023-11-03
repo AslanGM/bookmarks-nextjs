@@ -1,0 +1,65 @@
+@import '@styles/bundle';
+
+.bookmark {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    padding        : rem-calc(27 12 21);
+    border-top     : 1px solid $body_color;
+    flex-wrap      : wrap;
+
+    &:last-child {
+        border-bottom: 1px solid $body_color;
+    }
+
+    &__title {
+        width: 100%;
+
+        @include breakpoint(large) {
+            width        : 44%;
+            margin-bottom: 0;
+        }
+    }
+
+    &__url {
+        width         : 100%;
+        text-transform: lowercase;
+
+        @include breakpoint(large) {
+            width: 36%;
+        }
+    }
+
+    &__input {
+        @include breakpoint(medium down) {
+            margin-bottom: rem-calc(12);
+        }
+
+        &:nth-child(1) {
+            width: 100%;
+
+            @include breakpoint(large) {
+                width: 44%;
+            }
+        }
+
+        &:nth-child(2) {
+            width: 100%;
+
+            @include breakpoint(large) {
+                width: 36%;
+            }
+        }
+    }
+
+    &__btns {
+        display       : flex;
+        flex-direction: column;
+        gap           : rem-calc(4);
+
+        @include breakpoint(medium down) {
+            flex-direction: row;
+            margin-top    : rem-calc(12);
+        }
+    }
+}

@@ -1,0 +1,100 @@
+@import './settings/colours';
+@import './settings/global';
+@import './settings/headings';
+@import './tools/units';
+@import './tools/breakpoint';
+@import './objects/container';
+@import './elements/form';
+
+* {
+    box-sizing: border-box;
+    padding   : 0;
+    margin    : 0;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    box-sizing              : border-box;
+}
+
+html,
+body {
+    max-width : 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    margin                : 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing   : grayscale;
+    text-rendering        : optimizeSpeed;
+    background            : $body-background;
+    font-weight           : $global-weight-normal;
+    line-height           : $global-lineheight;
+    font-size             : $body-font-size;
+    color                 : $body-font-color;
+}
+
+::selection {
+    background: $body_color;
+    color     : $bg_color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight   : $header-font-weight;
+    color         : $header-color;
+    line-height   : $header-lineheight;
+    margin-bottom : $header-margin-bottom;
+    word-break    : break-word;
+    text-transform: uppercase;
+}
+
+@each $size,
+$headers in $header-styles {
+    @include breakpoint($size) {
+
+        @each $header,
+        $header-defs in $headers {
+            $font-size-temp: 1rem;
+
+            #{$header} {
+                @if map-has-key($header-defs, font-size) {
+                    $font-size-temp: rem-calc(map-get($header-defs, font-size));
+                    font-size      : $font-size-temp;
+                }
+            }
+        }
+    }
+}
+
+img {
+    display               : inline-block;
+    vertical-align        : middle;
+    max-width             : 100%;
+    height                : auto;
+    -ms-interpolation-mode: bicubic;
+}
+
+a {
+    color          : inherit;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+svg {
+    fill  : $body_color;
+    width : rem-calc(14);
+    height: rem-calc(14);
+}
+
+.error {
+    color: $error_color;
+}

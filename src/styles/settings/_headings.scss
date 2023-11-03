@@ -1,0 +1,33 @@
+$header-font-weight: 700 !default;
+$header-font-style : normal !default;
+$font-family-monospace: Consolas,
+'Liberation Mono',
+Courier,
+monospace !default;
+$font-family-serif   : 'serif' !default;
+$header-color        : inherit !default;
+$header-lineheight   : 1.2 !default;
+$header-margin-bottom: 0.625rem !default;
+
+$header-styles: (small: ('h1': ('font-size': 48),
+        'h2': ('font-size': 38),
+        'h3': ('font-size': 32),
+        'h4': ('font-size': 24),
+        'h5': ('font-size': 20),
+        'h6': ('font-size': 18),
+    ),
+    medium: ('h1': ('font-size': 64),
+        'h2': ('font-size': 56),
+        'h3': ('font-size': 36),
+        'h4': ('font-size': 26),
+        'h5': ('font-size': 22),
+        'h6': ('font-size': 18),
+    ),
+    large: ('h1': ('font-size': 86),
+        'h2': ('font-size': 64),
+        'h3': ('font-size': 56),
+        'h4': ('font-size': 32),
+        'h5': ('font-size': 24),
+        'h6': ('font-size': 18),
+    ),
+) !default;

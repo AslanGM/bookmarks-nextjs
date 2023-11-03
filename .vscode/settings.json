@@ -1,0 +1,9 @@
+{
+    "editor.formatOnSave": true,
+    "editor.hover.enabled": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": true,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": true
+}

@@ -1,0 +1,31 @@
+@import '@styles/bundle';
+
+.pagination {
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: center;
+    align-items    : center;
+    gap            : rem-calc(6);
+    margin         : rem-calc(32 0 32);
+
+    @include breakpoint(large) {
+        margin: rem-calc(48 0 64);
+    }
+
+    &__prev {
+        @include breakpoint(large) {
+            margin-right: rem-calc(24);
+        }
+    }
+
+    &__next {
+        @include breakpoint(large) {
+            margin-left: rem-calc(24);
+        }
+
+        svg {
+            margin-left : rem-calc(6);
+            margin-right: 0;
+        }
+    }
+}

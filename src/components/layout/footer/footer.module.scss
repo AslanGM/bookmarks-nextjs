@@ -1,0 +1,10 @@
+@import '@styles/bundle';
+
+.footer {
+    padding   : rem-calc(32 0);
+    text-align: center;
+
+    a {
+        text-decoration: underline;
+    }
+}

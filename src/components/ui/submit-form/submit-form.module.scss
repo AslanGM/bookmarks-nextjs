@@ -1,0 +1,132 @@
+@import '@styles/bundle';
+
+.sform {
+    margin: rem-calc(32 0 24);
+
+    @include breakpoint(large) {
+        margin: rem-calc(64 0 48);
+    }
+
+    &__btn {
+        display    : block;
+        margin-left: auto;
+        font-size  : rem-calc(24);
+
+        @include breakpoint(large) {
+            font-size: rem-calc(42);
+            padding  : rem-calc(18 24 12);
+        }
+
+        &-holder {
+            visibility: hidden;
+        }
+
+        svg {
+            width        : rem-calc(16);
+            height       : rem-calc(16);
+            transition   : .2s transform ease-out;
+            margin-bottom: 1px;
+
+            @include breakpoint(large) {
+                width        : rem-calc(24);
+                height       : rem-calc(24);
+                margin-right : rem-calc(16);
+                margin-bottom: rem-calc(3);
+            }
+        }
+
+        &:hover {
+            svg {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    &__wrapper {
+        position       : fixed;
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+        left           : 0;
+        top            : 0;
+        right          : 0;
+        bottom         : 0;
+        padding        : rem-calc(0 20);
+        visibility     : hidden;
+        z-index        : 99;
+    }
+
+    &__overlay {
+        position        : absolute;
+        left            : 0;
+        top             : 0;
+        right           : 0;
+        bottom          : 0;
+        background-color: $light_color;
+        opacity         : .8;
+    }
+
+    &__holder,
+    &__success {
+        position        : relative;
+        background-color: $purple_color;
+        color           : $body_color;
+        padding         : rem-calc(72 20 32);
+        max-width       : rem-calc(592);
+        width           : 100%;
+        border-radius   : rem-calc(12);
+        text-align      : center;
+
+        @include breakpoint(large) {
+            padding: rem-calc(90 64 64);
+        }
+    }
+
+    &__success {
+        position        : absolute;
+        background-color: $blue_color;
+        visibility      : hidden;
+
+        a {
+            color: $bg_color;
+        }
+    }
+
+    &__form {
+        display       : flex;
+        flex-direction: column;
+
+        &-btn {
+            margin-top: rem-calc(6);
+            font-size : rem-calc(24);
+            padding   : rem-calc(18 16 14);
+        }
+    }
+
+    &__input {
+        margin-bottom: rem-calc(16);
+    }
+
+    &__close {
+        position: absolute;
+        right   : rem-calc(20);
+        top     : rem-calc(20);
+        padding : rem-calc(8);
+
+        @include breakpoint(large) {
+            padding: rem-calc(12);
+        }
+
+        svg {
+            display     : block;
+            width       : rem-calc(16);
+            height      : rem-calc(16);
+            margin-right: 0;
+
+            @include breakpoint(large) {
+                width : rem-calc(20);
+                height: rem-calc(20);
+            }
+        }
+    }
+}

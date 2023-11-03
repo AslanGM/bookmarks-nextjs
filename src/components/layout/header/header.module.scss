@@ -1,0 +1,9 @@
+@import '@styles/bundle';
+
+.header {
+    padding-top: rem-calc(64);
+
+    @include breakpoint(large) {
+        padding-top: rem-calc(92);
+    }
+}

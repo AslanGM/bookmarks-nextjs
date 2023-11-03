@@ -1,0 +1,66 @@
+@import '@styles/bundle';
+
+.button {
+    &--brown {
+        background-color: $brown_color;
+        border          : 1px solid $brown_color;
+
+        &:hover {
+            color: $brown_color;
+        }
+    }
+
+    &--blue {
+        background-color: $blue_color;
+        border          : 1px solid $blue_color;
+
+        &:hover {
+            color: $blue_color;
+        }
+    }
+
+    &--yellow {
+        background-color: $yellow_color;
+        border          : 1px solid $yellow_color;
+
+        &:hover {
+            color: $yellow_color;
+        }
+    }
+
+    &--purple {
+        background-color: $purple_color;
+        border          : 1px solid $purple_color;
+
+        &:hover {
+            color: $purple_color;
+        }
+    }
+
+    &--red {
+        background-color: $red_color;
+        border          : 1px solid $red_color;
+
+        &:hover {
+            color: $red_color;
+        }
+    }
+
+    &--green {
+        background-color: $green_color;
+        border          : 1px solid $green_color;
+
+        &:hover {
+            color: $green_color;
+        }
+    }
+
+    &--beige {
+        background-color: $beige_color;
+        border          : 1px solid $beige_color;
+
+        &:hover {
+            color: $beige_color;
+        }
+    }
+}

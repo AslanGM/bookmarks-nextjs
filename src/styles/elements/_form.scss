@@ -1,0 +1,101 @@
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family            : inherit;
+    -webkit-font-smoothing : antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input[type=submit] {
+    appearance      : none;
+    border          : 0;
+    line-height     : 1;
+    cursor          : pointer;
+    color           : $bg_color;
+    padding         : rem-calc(8 16 6);
+    text-transform  : uppercase;
+    font-size       : rem-calc(14);
+    font-weight     : 600;
+    background-color: $body_color;
+    border          : 1px solid $body_color;
+    transition      : .2s background-color ease-out, .2s color ease-out;
+    border-radius   : rem-calc(4);
+
+    &:hover {
+        background-color: $bg_color;
+        color           : $body_color;
+
+        svg {
+            fill: currentColor;
+        }
+    }
+
+    &:disabled {
+        opacity         : .3;
+        background-color: $bg_color;
+        color           : $body_color;
+
+        svg {
+            fill: $body_color;
+        }
+    }
+
+    svg {
+        fill        : $bg_color;
+        width       : rem-calc(12);
+        height      : rem-calc(12);
+        margin-right: rem-calc(6);
+        transition  : .2s fill ease-out;
+    }
+}
+
+label {
+    margin-bottom: rem-calc(5);
+    display      : block;
+}
+
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=url],
+textarea {
+    padding         : rem-calc(12 8);
+    font-size       : inherit;
+    border          : 1px solid $grey_color;
+    background-color: $bg_color;
+    border-radius   : rem-calc(4);
+    width           : 100%;
+
+    &::-webkit-input-placeholder {
+        color: $grey_color;
+    }
+
+    &::-moz-placeholder {
+        color  : $grey_color;
+        opacity: 1;
+    }
+
+    &::-ms-placeholder {
+        color: $grey_color;
+    }
+
+    &::placeholder {
+        color: $grey_color;
+    }
+
+    &:focus {
+        border-color: $grey_color;
+        outline     : none;
+    }
+
+    &.has-error {
+        border-width: 2px;
+        border-color: $error_color;
+    }
+}
